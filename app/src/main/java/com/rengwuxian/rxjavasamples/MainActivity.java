@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.rengwuxian.rxjavasamples.module.cache_6.CacheFragment;
 import com.rengwuxian.rxjavasamples.module.customAnimation_7.CustomAnimationFragment;
+import com.rengwuxian.rxjavasamples.module.customAnimation_8.CustomAnimationFragment2;
 import com.rengwuxian.rxjavasamples.module.elementary_1.ElementaryFragment;
 import com.rengwuxian.rxjavasamples.module.map_2.MapFragment;
 import com.rengwuxian.rxjavasamples.module.token_4.TokenFragment;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
             @Override
             public int getCount() {
-                return 7;
+                return 8;
             }
 
             @Override
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                         return new CacheFragment();
                     case 6:
                         return new CustomAnimationFragment();
+                    case 7:
+                        return new CustomAnimationFragment2();
                     default:
                         return new ElementaryFragment();
                 }
@@ -77,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                         return getString(R.string.title_cache);
                     case 6:
                         return getString(R.string.animation);
+                    case 7:
+                        return getString(R.string.animation1);
                     default:
                         return getString(R.string.title_elementary);
                 }
