@@ -53,4 +53,5 @@
     <string name="phone_login">手机登录</string>
     <string name="phone_reg">注册帐号</string>
     <string name="animation1">自定义动画框架2</string>
+    <string name="custom_view">customView</string>
 </resources>
