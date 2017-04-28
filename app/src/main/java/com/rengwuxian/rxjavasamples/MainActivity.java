@@ -1,19 +1,20 @@
 package com.rengwuxian.rxjavasamples;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.app.Fragment;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.rengwuxian.rxjavasamples.module.token_advanced_5.TokenAdvancedFragment;
-import com.rengwuxian.rxjavasamples.module.token_4.TokenFragment;
 import com.rengwuxian.rxjavasamples.module.cache_6.CacheFragment;
-import com.rengwuxian.rxjavasamples.module.zip_3.ZipFragment;
+import com.rengwuxian.rxjavasamples.module.customAnimation_7.CustomAnimationFragment;
 import com.rengwuxian.rxjavasamples.module.elementary_1.ElementaryFragment;
 import com.rengwuxian.rxjavasamples.module.map_2.MapFragment;
+import com.rengwuxian.rxjavasamples.module.token_4.TokenFragment;
+import com.rengwuxian.rxjavasamples.module.token_advanced_5.TokenAdvancedFragment;
+import com.rengwuxian.rxjavasamples.module.zip_3.ZipFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
             @Override
             public int getCount() {
-                return 6;
+                return 7;
             }
 
             @Override
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                         return new TokenAdvancedFragment();
                     case 5:
                         return new CacheFragment();
+                    case 6:
+                        return new CustomAnimationFragment();
                     default:
                         return new ElementaryFragment();
                 }
@@ -72,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                         return getString(R.string.title_token_advanced);
                     case 5:
                         return getString(R.string.title_cache);
+                    case 6:
+                        return getString(R.string.animation);
                     default:
                         return getString(R.string.title_elementary);
                 }
